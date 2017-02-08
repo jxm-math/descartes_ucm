@@ -11,7 +11,6 @@
 \usepackage{multirow}
 \usepackage{hyperref}
 \usepackage{array}
-\setlength{\parskip}{4mm}
 
 \usepackage{color} 
 \definecolor{cap}{rgb}{0.1,0.2,0.3}
@@ -106,7 +105,7 @@ Consideremos la ecuación algebraica de grado $n$:
 	
 $$P(x)\equiv a_n x^n + a_{n-1}x^{n-1} + \cdots + a_0 =0$$
 	
-donde los coeficientes $a_k$ son reales y $a_n\neq 0$
+donde los coeficientes $a_k$ son reales y $a_n\neq 0$\\~\\
 	
 \pause
 	
@@ -125,7 +124,7 @@ $$P^{s)}(\xi)\neq 0$$
 
 \begin{frame}
 	
-	\textbf{Teorema} Si los coeficientes de la ecuación algebraica son reales, sus raíces son reales o conjugadas a pares, es decir, si $\xi=\alpha+\ii\beta$, $\alpha,\beta\in\rr$ es raíz de $P(x)$, también lo es $\bar\xi=\alpha-\ii\beta$
+\textbf{Teorema} Si los coeficientes de la ecuación algebraica son reales, sus raíces son reales o conjugadas a pares, es decir, si $\xi=\alpha+\ii\beta$, $\alpha,\beta\in\rr$ es raíz de $P(x)$, también lo es $\bar\xi=\alpha-\ii\beta$\\~\\
 	
 	\pause
 	
@@ -139,7 +138,7 @@ $$P^{s)}(\xi)\neq 0$$
 	
 	$$P^{k)}(c)\geqslant 0\quad (k=0,1,2,\cdots,n)$$
 	
-	y $P^{n)}(c)=n!a_n>0$, entonces $R=c$ puede tomarse como frontera superior de las raíces positivas de la ecuación $P(x)=0$
+	y $P^{n)}(c)=n!a_n>0$, entonces $R=c$ puede tomarse como frontera superior de las raíces positivas de la ecuación $P(x)=0$\\~\\
 	
 	\pause
 	
@@ -159,15 +158,17 @@ $$P^{s)}(\xi)\neq 0$$
 	
 	para los cuales se cumplan las desigualdades
 	
-	$$P^{n-1)}(c_{1})\geqslant 0$$\\
-	$$P^{n-2)}(c_{2})\geqslant 0$$\\
-	$$\cdots$$\\
-	$$P'(c_{n-1})\geqslant 0$$\\
-	$$P(c_{n})\geqslant 0$$\\
+	$$P^{n-1)}(c_{1})\geqslant 0$$
+	$$P^{n-2)}(c_{2})\geqslant 0$$
+	$$\cdots$$
+	$$P'(c_{n-1})\geqslant 0$$
+	$$P(c_{n})\geqslant 0$$
 	
 	Tales números existen siempre, pues si $a_n>0$,
 	
-	$$P^{k)}(x)\xrightarrow{x\longrightarrow\infty}\infty\quad (k=0,1,2,\cdots,n-1)$$. Finalmente podemos tomar $c=c_n$
+	$$P^{k)}(x)\xrightarrow{x\longrightarrow\infty}\infty\quad (k=0,1,2,\cdots,n-1)$$
+	
+	y podemos tomar $c=c_n$
 	
 \end{frame}
 
@@ -187,7 +188,7 @@ $$P^{s)}(\xi)\neq 0$$
 	
 	Iterando este razonamiento, llegamos a que $P(x)$ es creciente en el intervalo $[c_{n-1},\infty)$, y para $x>c_n\geqslant c_{n_1}$
 	
-	$P(x)>P(c_n)\geqslant 0$
+	$$P(x)>P(c_n)\geqslant 0$$
 	
 	con lo que $x^+\leqslant c_n$
 	
@@ -203,33 +204,97 @@ $$P^{s)}(\xi)\neq 0$$
 	
 	En este caso,
 	
-	$$P'(x)=10x^4-200x+2$$\\
-	$$P''(x)=40x^3-200$$\\
-	$$P'''(x)=120x^2$$\\
-	$$P^{4)}(x)=240x$$\\
+	$$P'(x)=10x^4-200x+2$$
+	$$P''(x)=40x^3-200$$
+	$$P'''(x)=120x^2$$
+	$$P^{4)}(x)=240x$$
 	$$P^{5)}=240$$
 	
 \end{frame}
 
 \begin{frame}
 	
-	$P'''(x)>0$, $P^{4)}(x)>0$, $P^{5)}(x)>0$ para $x>0$
+	$P'''(x)>0$, $P^{4)}(x)>0$, $P^{5)}(x)>0$ para $x>0$\\~\\
 	
 	También
 	
 	$$P''(x)=40(x^3-5)>0\quad\text{para }x\geqslant 2$$
 	
-	Supondremos $c_1=c_2=c_3=2$
+	Supondremos $c_1=c_2=c_3=2$\\~\\
 	
 	\pause
 	
-	$P'(2)=-238<0$, pero $P'(3)=212>0$ así que tomamos $c_4=3$
+	$P'(2)=-238<0$, pero $P'(3)=212>0$ así que tomamos $c_4=3$\\~\\
 	
 	\pause
 	
 	$P(3)=-409<0$, pero $P(4)=455>0$ así que tomamos $c_5=4$, y $R=4$ es frontera superior de las raíces positivas de esta ecuación 
 	
 	\hfill{\small \href{http://mathifold.org/es/visualisation_classic_spirals.html}{[Espirales Clásicas]}}
+	
+\end{frame}
+
+\begin{frame}
+	
+	¿Cómo hallar el número total de raíces positivas de una ecuación algebraica? Recordemos
+	
+	\begin{itemize}
+		\item Si $P(a)P(b)<0$, en el intervalo $(a,b)$ existe un número impar de raíces de $P(x)$ (contando multiplicidades)
+		\item Si $P(a)P(b)>0$, en el intervalo $(a,b)$ existe un número par (o nulo) de raíces de $P(x)$
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{Teorema de Sturm} Si un polinomio $P(x)$ no tiene raíces múltiples y $P(a)\,P(b)\neq 0$, el número de sus raíces reales en el intervalo $a<x<b$ es exactamente igual al número de cambios de signo perdidos en la secuencia de Sturm del polinomio $P(x)$ yendo de $x=a$ a $x=b$, es decir
+	
+	$$N(a,b)=N(a)-N(b)$$ 
+	
+	\pause
+	
+	\textbf{Corolario 1} Si $P(0)\neq 0$, los números $N_+$ y $N_-$ de raíces positivas y negativas del polinomio $P(x)$ son
+	
+	$$N_+=N(0)-N(+\infty)\qquad N_-=N(-\infty)-N(0)$$
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{Corolario 2} Un polinomio $P(x)$ de grado $n$ (sin raíces múltiples) tiene todas sus raíces reales si y sólo si
+	
+	$$N(-\infty)-N(+\infty)=n$$
+	
+	De este modo, si $a_n>0$, todas la raíces serán reales si y sólo si
+	
+	\begin{enumerate}
+		\item la secuencia de Sturm tiene un número máximo de elementos $n+1$, esto es, $m=n$
+		\item son ciertas las desigualdades $P_k(+\infty)>0$, es decir, los coeficientes dominantes de todas las funciones de Sturm $P_k(x)$ son positivos 
+	\end{enumerate}
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{Ejemplo} Determinar el número de raíces positivas y negativas de la ecuación
+	
+	$$x^4-4x+1=0$$
+	
+	\pause
+	
+	\textbf{Solución} La secuencia de Sturm es de la forma
+	
+	$$P(x)=x^4-4x+1$$
+	$$P_1(x)=x^3-1$$
+	$$P_2(x)=3x-1$$
+	$$P_3(x)=1$$
+
+	de donde
+	
+	$$N(-\infty)=2\quad N(0)=2\quad N(+\infty)=0$$
+	$$N_+=2-0=2\qquad N_-=2-2=0$$
+	
+	con lo que $P(x)$ tiene dos raíces positivas y ninguna negativa (y por tanto dos raíces complejas)
 	
 \end{frame}
 
