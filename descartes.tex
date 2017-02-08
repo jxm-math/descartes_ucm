@@ -1,4 +1,4 @@
-\documentclass[xcolor=pdftex,table,spanish,12pt]{beamer}
+\documentclass[xcolor=pdftex,table,spanish,10pt]{beamer}
 \usepackage[latin1]{inputenc}
 \usepackage{babel}
 \usepackage{graphicx}
@@ -11,16 +11,18 @@
 \usepackage{multirow}
 \usepackage{hyperref}
 \usepackage{array}
+\setlength{\parskip}{4mm}
 
 \usepackage{color} 
 \definecolor{cap}{rgb}{0.1,0.2,0.3}
 \definecolor{xblue}{rgb}{0.290, 0.365, 0.388}
+\definecolor{light}{rgb}{0.15,0.3,0.6}
 
 \hypersetup{colorlinks,%
 citecolor=dark,%
 filecolor=dark,%
 linkcolor=xblue!20!white,%
-urlcolor=purpure,%
+urlcolor=light,%
 pdftex}
 \usepackage{latexsym}
 \usepackage{amsmath}
@@ -30,7 +32,8 @@ pdftex}
 \MakePerPage[2]{footnote} 
 \usepackage[default, osfigures]{opensans}
 
-
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\rr}{\mathbb{R}}
 
 \newenvironment{rcases}
   {\left.\begin{aligned}}
@@ -98,7 +101,136 @@ pdftex}
 \subsection{}
 
 \begin{frame}\frametitle{1.1 La Geometría de Descartes}
+	
+Consideremos la ecuación algebraica de grado $n$:
+	
+$$P(x)\equiv a_n x^n + a_{n-1}x^{n-1} + \cdots + a_0 =0$$
+	
+donde los coeficientes $a_k$ son reales y $a_n\neq 0$
+	
+\pause
+	
+\textbf{Teorema Fundamental del Álgebra} Toda ecuación algebraica de grado $n$ tiene $n$ raíces reales o complejas, contadas según su multiplicidad
+	
+\end{frame}
+
+\begin{frame}
+	
+Una raíz $\xi$ de la ecuación $P(x)=0$ tiene multiplicidad $s$ cuando 
+	
+$$P(\xi)=P'(\xi)=P''(\xi)=\cdots=P^{s-1)}(\xi)=0$$ 
+$$P^{s)}(\xi)\neq 0$$ 
+
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{Teorema} Si los coeficientes de la ecuación algebraica son reales, sus raíces son reales o conjugadas a pares, es decir, si $\xi=\alpha+\ii\beta$, $\alpha,\beta\in\rr$ es raíz de $P(x)$, también lo es $\bar\xi=\alpha-\ii\beta$
+	
+	\pause
+	
+	\textbf{Corolario} Una ecuación algebraica de grado impar con coeficientes reales tiene al menos una raíz real
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{Teorema de Newton} Si para $x=c>0$ el polinomio $P(x)$ y todas sus derivadas $P'(x)$, $P''(x)$, ... , $P^{n)}(x)$ son no negativas
+	
+	$$P^{k)}(c)\geqslant 0\quad (k=0,1,2,\cdots,n)$$
+	
+	y $P^{n)}(c)=n!a_n>0$, entonces $R=c$ puede tomarse como frontera superior de las raíces positivas de la ecuación $P(x)=0$
+	
+	\pause
+	
+	\textbf{Demostración} Si $x>c$, por la fórmula de Taylor,
+	
+	$P(x)=P(c)+P'(c)(x-c)+\cdots+\frac{P^{n)}}{n!}(x-c)^n>0$
+	
+	y así todas las raíces positivas $x^+$ satisfacen $x^+\leqslant c$ 
 			
+\end{frame}
+
+\begin{frame}
+	
+	En las aplicaciones prácticas del Teorema de Newton se utiliza el sistema de tanteo (por ejemplo, mediante el esquema de Hörner) para hallar una secuencia monótona creciente de números positivos
+	
+	$$0<c_1\leqslant c_2\leqslant\cdots\leqslant c_{n-1}\leqslant c_n$$
+	
+	para los cuales se cumplan las desigualdades
+	
+	$$P^{n-1)}(c_{1})\geqslant 0$$\\
+	$$P^{n-2)}(c_{2})\geqslant 0$$\\
+	$$\cdots$$\\
+	$$P'(c_{n-1})\geqslant 0$$\\
+	$$P(c_{n})\geqslant 0$$\\
+	
+	Tales números existen siempre, pues si $a_n>0$,
+	
+	$$P^{k)}(x)\xrightarrow{x\longrightarrow\infty}\infty\quad (k=0,1,2,\cdots,n-1)$$. Finalmente podemos tomar $c=c_n$
+	
+\end{frame}
+
+\begin{frame}
+	
+	En efecto, como $P^{n)}(x)=n!a_n>0$, la función $P^{n-1)}(x)$ es creciente, y así
+	
+	$$P^{n-1)}(x)>P^{n-1)}(c_1)\geqslant 0$$
+	
+	\pause
+	
+	Así de nuevo, $P^{n-2)}(x)$ es creciente en el intervalo $[c_1,\infty)$, y por tanto, para $x>c_2\geqslant c_1$,
+	
+	$$P^{n-2)}(x)>P^{n-2)}(c_2)\geqslant 0$$
+	
+	\pause
+	
+	Iterando este razonamiento, llegamos a que $P(x)$ es creciente en el intervalo $[c_{n-1},\infty)$, y para $x>c_n\geqslant c_{n_1}$
+	
+	$P(x)>P(c_n)\geqslant 0$
+	
+	con lo que $x^+\leqslant c_n$
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{Ejemplo} Sea
+	
+	$$P(x)=2x^5-100x^2+2x-1$$
+	
+	\pause
+	
+	En este caso,
+	
+	$$P'(x)=10x^4-200x+2$$\\
+	$$P''(x)=40x^3-200$$\\
+	$$P'''(x)=120x^2$$\\
+	$$P^{4)}(x)=240x$$\\
+	$$P^{5)}=240$$
+	
+\end{frame}
+
+\begin{frame}
+	
+	$P'''(x)>0$, $P^{4)}(x)>0$, $P^{5)}(x)>0$ para $x>0$
+	
+	También
+	
+	$$P''(x)=40(x^3-5)>0\quad\text{para }x\geqslant 2$$
+	
+	Supondremos $c_1=c_2=c_3=2$
+	
+	\pause
+	
+	$P'(2)=-238<0$, pero $P'(3)=212>0$ así que tomamos $c_4=3$
+	
+	\pause
+	
+	$P(3)=-409<0$, pero $P(4)=455>0$ así que tomamos $c_5=4$, y $R=4$ es frontera superior de las raíces positivas de esta ecuación 
+	
+	\hfill{\small \href{http://mathifold.org/es/visualisation_classic_spirals.html}{[Espirales Clásicas]}}
+	
 \end{frame}
 
 \begin{frame}\frametitle{1.2 Problemas clásicos de Apolonio y Pappus}
