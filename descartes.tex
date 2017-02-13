@@ -34,6 +34,9 @@ pdftex}
 \newcommand{\ii}{\mathrm{i}}
 \newcommand{\rr}{\mathbb{R}}
 
+\usepackage{accents}
+\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+
 \newenvironment{rcases}
   {\left.\begin{aligned}}
   {\end{aligned}\right\rbrace}
@@ -295,6 +298,76 @@ $$P^{s)}(\xi)\neq 0$$
 	$$N_+=2-0=2\qquad N_-=2-2=0$$
 	
 	con lo que $P(x)$ tiene dos raíces positivas y ninguna negativa (y por tanto dos raíces complejas)
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{Teorema de Budan-Fourier} Si los números $a<b$ no son raíces de un polinomio $P(x)$ de grado $n$, el número $N(a,b)$ de raíces reales de la ecuación $P(x)=0$ que caen entre $a$ y $b$ es igual al número mínimo $\Delta N$ de pérdidas de cambio de signo en la secuencia de derivadas sucesivas
+	
+	$$P(x),\,P'(x),\,\cdots,\,P^{n-1)}(x),\,P^{n)}(x)$$
+	
+	yendo de $x=a$ a $x=b$, o menor que $\Delta N$ por un número par
+	
+	$$N(a,b)=\Delta N-2k$$
+	
+	donde 
+	
+	$$\Delta N=\ubar{N}(a)-\bar{N}(b)$$
+	
+	y $\ubar{N}(a)$, $\bar{N}(b)$ son los números inferior y superior de variaciones de signo en la secuencia anterior en $x=a,\,b$
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{Teorema de Hua} Si una ecuación 
+	
+	$$a_n x^n + a_{n-1}x^{n-1} + \cdots + a_0 =0$$
+	
+	tiene coeficientes reales y todas sus raíces son reales, el cuadrado de cada coeficiente no extremo de la ecuación es mayor que el producto de los dos coeficientes adyacentes
+	
+	$$a_k^2>a_{k-1}a_{k+1}$$
+	
+	\pause
+	
+	\textbf{Corolario} Si para cierto $k$ tenemos la desigualdad 
+	
+	$$a_k^2\leqslant a_{k-1}a_{k+1}$$
+	
+	entonces la ecuación tiene al menos un par de raíces complejas
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{Ejemplo} Determínese la composición de las raíces de la ecuación 
+	
+	$$x^4+8x^3-12x^2+104x-20=0$$
+	
+	\pause
+	
+	\textbf{Solución} Como
+	
+	$$(-12)^2<8\cdot 104$$
+	
+	la ecuación tiene raíces complejas, y el número de raíces reales no excede de 2. En la secuencia de coeficientes de la ecuación hay $\Delta N=3$ variaciones de signo y $\Delta P=1$ no variaciones de signo. Así, en base a la regla de Descartes y a sus corolarios, nuestra ecuación tiene una raíz positiva, una negativa y un par de raíces complejas
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{Método de Bernouilli}  Supongamos que se tiene una ecuación algebraica
+	
+	$$a_n x^n + a_{n-1}x^{n-1} + \cdots + a_0 =0$$
+	
+	cuyas raíces $x_1,\,x_2,\,\cdots x_n$ son distintas\\~\\
+	
+	\pause
+	
+	En base a los coeficientes $a_k$ formamos la relación de recurrencia
+	
+	$$a_n y_{n+i} + a_{n-1}y_{n-1+i} + \cdots + a_0y_i =0\qquad (i=0,\,1,\,2,\,\cdots)$$
 	
 \end{frame}
 
