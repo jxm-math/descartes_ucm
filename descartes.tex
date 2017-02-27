@@ -373,7 +373,304 @@ $$P^{s)}(\xi)\neq 0$$
 
 \begin{frame}\frametitle{1.2 Problemas clásicos de Apolonio y Pappus}
 	
+	La teoría general de segundo grado (enfoque clásico)
+	
+	$$F(x,y)=a_{11}x^2+2a_{12}xy+a_{22}y^2+2a_{13}x+2a_{23}y+a_{33}=0$$
+	
+	Comprende las cónicas en un sistema de referencia cartesiana
+	
 \end{frame}
+
+\begin{frame}
+	
+	Invariantes por semejanza
+	
+	$$\Delta=\left|
+	\begin{matrix}
+	a_{11} & a_{12} &  a_{13}\\
+	a_{12} & a_{22} &  a_{23}\\
+	a_{13} & a_{23} &  a_{33}\\
+	\end{matrix}
+	\right|$$
+	
+	$$\delta=\left|
+	\begin{matrix}
+	a_{11} & a_{12}\\
+	a_{12} & a_{22}\\
+	\end{matrix}
+	\right|$$
+	
+	$\Delta\neq 0 \quad\leadsto$ curva no degenerada
+	
+	$\Delta= 0 \quad\leadsto$ curva degenerada
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{CASO I:} $\delta\neq 0$
+	
+	Se toma la transformación de coordenadas
+	
+	$$
+	\left\{
+	\begin{array}{ccc}
+	x & = & x'+u\\
+	y & = & y'+v\\
+	\end{array}
+	\right.\Longleftrightarrow
+	\left\{
+	\begin{array}{ccc}
+	x' & = & x-u\\
+	y' & = & y-v\\
+	\end{array}
+	\right.
+	$$
+	
+	$$\dfrac{\partial F}{\partial x}=2a_{11}x+2a_{12}y+2a_{13}=0$$
+	
+	$$\dfrac{\partial F}{\partial y}=2a_{12}x+2a_{22}y+2a_{23}=0$$
+	
+	Tomamos $x'=y'=0$
+	
+	$$
+	\left\{
+	\begin{array}{cccccc}
+	a_{11}u & + &a_{12}v & + & a_{13} & = 0\\
+	a_{12}u & + &a_{22}v & + & a_{23} & = 0\\
+	\end{array}
+	\right.
+	$$
+	
+	$$
+	\begin{pmatrix}
+	a_{11} & a_{12}\\
+	a_{12} & a_{22}\\
+	\end{pmatrix}
+	\begin{pmatrix}
+	u\\
+	v\\
+	\end{pmatrix}
+	=-
+	\begin{pmatrix}
+	a_{13}\\
+	a_{23}\\
+	\end{pmatrix}
+	$$
+	
+\end{frame}
+
+\begin{frame}
+	
+	$$
+	\begin{pmatrix}
+	u\\
+	v\\
+	\end{pmatrix}
+	=-\dfrac{1}{\delta}
+	\begin{pmatrix}
+	a_{22} & -a_{12}\\
+	-a_{12} & a_{11}\\
+	\end{pmatrix}
+	\begin{pmatrix}
+	a_{13}\\
+	a_{23}\\
+	\end{pmatrix}
+	$$
+	
+	Al insertar en la ecuación inicial nos queda
+	
+	$$F(x',y')=a_{11}x'^2+2a_{12}x'y'+a_{22}y'^2+\dfrac{\Delta}{\delta}=0$$
+	
+	\textbf{obs:} $(u,v)$ corresponde al centro de la cónica
+	
+\end{frame}
+
+\begin{frame}
+	
+	Rotación de la referencia $(x',y')$
+	
+	$$
+	\begin{pmatrix}
+	x'\\
+	y'\\
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+	\cos\alpha & -\sin\alpha\\
+	\sin\alpha & \cos\alpha\\
+	\end{pmatrix}
+	\begin{pmatrix}
+	\xi\\
+	\eta\\
+	\end{pmatrix}
+	$$
+	
+	En la referencia $(\xi,\eta)$, nuestra ecuación toma la forma
+	
+	$$F(\xi,\eta)=b_{11}\xi^2+b_{22}\eta^2+\dfrac{\Delta}{\delta}=0$$
+	
+	donde
+	
+	$$b_{11}=\dfrac{1}{2}\left(a_{11}+a_{22}\pm\sqrt{(a_{11}-a_{22})^2+4a_{12}^2}\right)$$
+	
+	$$b_{11}=\dfrac{1}{2}\left(a_{11}+a_{22}\mp\sqrt{(a_{11}-a_{22})^2+4a_{12}^2}\right)$$
+	
+	\textbf{obs:} 
+	
+	$a_{12}>0\,\leadsto$ los signos de la raíz son $(b_{11}\rightarrow +,b_{22}\rightarrow -)$
+	
+	$a_{12}<0\,\leadsto$ los signos de la raíz son $(b_{11}\rightarrow -,b_{22}\rightarrow +)$ 
+	
+	$\delta=b_{11}b_{22}$, $b_{11}+b_{22}=a_{11}+a_{22}$
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{a)} $\delta>0$, $\Delta\neq 0$
+	
+	$$\text{elipse real }\left\{
+	\begin{array}{cc}
+	b_{11} & >0\\
+	b_{22} & >0\\
+	\Delta & <0\\
+	\end{array}
+	\right.\qquad
+	\text{elipse imaginaria }\left\{
+	\begin{array}{cc}
+	b_{11} & >0\\
+	b_{22} & >0\\
+	\Delta & >0\\
+	\end{array}
+	\right.$$
+	
+	\textbf{b)} $\delta>0$, $\Delta= 0$ rectas coincidentes imaginarias
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{c)} $\delta<0$, $\Delta\neq 0$
+	
+	$$\text{hipérbola }\left\{
+	\begin{array}{cc}
+	b_{11} & >0\\
+	b_{22} & <0\\
+	\Delta & \neq 0\\
+	\end{array}
+	\right.$$
+	
+	\textbf{d)} $\delta<0$, $\Delta= 0$ rectas coincidentes reales
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{CASO II:} $\delta= 0$
+	
+	Rotación de la referencia $(x,y)$
+	
+	$$
+	\begin{pmatrix}
+	x\\
+	y\\
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+	\cos\alpha & -\sin\alpha\\
+	\sin\alpha & \cos\alpha\\
+	\end{pmatrix}
+	\begin{pmatrix}
+	x'\\
+	y'\\
+	\end{pmatrix}
+	$$
+	
+	En la referencia $(x',y')$ la ecuación toma la forma
+	
+	$$F(x',y')=b_{11}x'^2+2b_{13}x'+2b_{23}y'+a_{33}=0$$
+	
+	con
+	
+	$b_{11}=\mathrm{tr}$, $b_{13}=\dfrac{a_{13}\sqrt{a_{11}}+a_{23}\sqrt{a_{22}}}{\sqrt{\mathrm{tr}}}$, $b_{23}=\dfrac{a_{23}\sqrt{a_{11}}+a_{13}\sqrt{a_{22}}}{\sqrt{\mathrm{tr}}}$
+					
+\end{frame}
+	
+\begin{frame}
+		
+	Tomamos el cambio de referencia
+	
+	$$x'=\xi-\dfrac{b_{13}}{b_{11}}\qquad y'=\eta-\dfrac{b_{11}a_{33}-b_{13}^2}{b_{11}}$$ 
+	
+	y llegamos a 
+	
+	$$F(\xi,\eta)=\xi^2+2\dfrac{b_{23}}{b_{11}}\eta=0$$
+					
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{a)} $\Delta\neq 0$ parábola
+	
+	\textbf{b)} $\Delta= 0$ 
+	
+	$$
+	\begin{array}{rcl}
+		\text{rectas reales paralelas} & \text{si} & a_{13}^2-a_{11}a_{33}>0\\
+		\text{recta doble} & \text{si} & a_{13}^2-a_{11}a_{33}=0\\
+		\text{rectas imaginarias paralelas} & \text{si} & a_{13}^2-a_{11}a_{33}<0\\
+	\end{array}
+	$$
+	
+\end{frame}
+
+\begin{frame}
+	
+	\begin{center}
+		\includegraphics[scale=0.5]{conic_classification.pdf}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{Ejemplo} $F(x,y)=x^2+2xy+y^2+1=0$
+	
+	$$\Delta=\left|
+	\begin{matrix}
+	1 & 1 &  0\\
+	1 & 1 &  0\\
+	0 & 0 &  1\\
+	\end{matrix}
+	\right|=0$$
+	
+	$$\delta=\left|
+	\begin{matrix}
+	1 & 1\\
+	1 & 1\\
+	\end{matrix}
+	\right|=0$$
+	
+	$$a_{13}^2-a_{11}a_{33}=-1<0$$
+	
+	par de rectas paralelas imaginarias
+	
+\end{frame}
+
+\begin{frame}
+	
+	\textbf{Ejemplo} $F(x,y)=5x^2+4xy+2y^2-18x-12y+15=0$\\~\\
+	
+	elipse, centro $(1,2)$ en la referencia original
+	
+	$$F(x',y')=5x'^2+4x'y'+2y'^2-6=0$$
+	
+	ángulo de giro: $\tan(2\alpha)=\dfrac{4}{3}$
+	
+\end{frame}
+
+\iffalse
 
 \begin{frame}\frametitle{1.3 Generalizaciones}
 	
@@ -581,6 +878,8 @@ $$P^{s)}(\xi)\neq 0$$
 \begin{frame}\frametitle{4.9 Números poligonales}
 	
 \end{frame}
+
+\fi
 
 % % % To get an empty page
 
